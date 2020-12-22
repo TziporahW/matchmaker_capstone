@@ -1,0 +1,14 @@
+{
+  id: user.id,
+  first_name: user.first_name,
+  last_name: user.last_name,
+  gender: user.gender,
+  birthday: user.birthday,
+  email: user.email,
+  phone_number: user.phone_number,
+  address: user.address,
+  currently_doing: user.currently_doing,
+  education: user.education,
+  references: user.references,
+  additional_info: user.additional_info,
+}

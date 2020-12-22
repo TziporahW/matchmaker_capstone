@@ -1,0 +1,9 @@
+{
+  id: match.id,
+  girl_id: match.girl_id,
+  girl_first_name: match.girl.first_name,
+  girl_last_name: match.girl.last_name,
+  boy_id: match.boy_id,
+  boy_first_name: match.boy.first_name,
+  boy_last_name: match.boy.last_name,
+}
