@@ -29,14 +29,14 @@ class Api::MatchesController < ApplicationController
     if current_user.admin
       @matches = Match.all
       render "index.json.jb"
-    elsif current_user.gender == "M" && current_user.girl_matches.length >= 1
+    elsif current_user.gender == "M"
       @matches = Match.where(boy_id: current_user.id)
       render "index.json.jb"
-    elsif current_user.gender == "F" && current_user.boy_matches.length >= 1
+    elsif current_user.gender == "F"
       @matches = Match.where(girl_id: current_user.id)
       render "index.json.jb"
     else
-      render json: { sorry: "You have no matches yet" }
+      @matches = []
     end
   end
 end

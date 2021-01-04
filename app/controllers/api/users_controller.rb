@@ -17,6 +17,7 @@ class Api::UsersController < ApplicationController
       education: params[:education],
       references: params[:references],
       additional_info: params[:additional_info],
+      image_url: params[:image_url],
     )
     if @user.save
       render json: { message: "User created successfully" }, status: :created

@@ -11,4 +11,5 @@
   education: user.education,
   references: user.references,
   additional_info: user.additional_info,
+  image_url: user.image_url,
 }
