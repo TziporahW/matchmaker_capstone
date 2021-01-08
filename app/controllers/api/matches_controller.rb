@@ -1,6 +1,6 @@
 class Api::MatchesController < ApplicationController
   before_action :authenticate_user
-  before_action :authenticate_admin, except: [:show, :index]
+  before_action :authenticate_admin, except: [:show, :index, :update]
 
   def create
     @match = Match.new(
@@ -37,6 +37,18 @@ class Api::MatchesController < ApplicationController
       render "index.json.jb"
     else
       @matches = []
+    end
+  end
+
+  def update
+    @match = Match.find_by(id: params[:id])
+    @match.girl_approval = params[:girl_approval] || @match.girl_approval
+    @match.boy_approval = params[:boy_approval] || @match.boy_approval
+
+    if @match.save
+      render "show.json.jb"
+    else
+      render json: { errors: @user.errors.full_messages }, status: :bad_request
     end
   end
 end

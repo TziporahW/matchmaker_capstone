@@ -6,4 +6,6 @@
   boy_id: match.boy_id,
   boy_first_name: match.boy.first_name,
   boy_last_name: match.boy.last_name,
+  girl_approval: match.girl_approval,
+  boy_approval: match.boy_approval,
 }

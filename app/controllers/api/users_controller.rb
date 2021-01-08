@@ -26,6 +26,27 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find_by(id: params[:id])
+
+    @user.first_name = params[:first_name] || @user.first_name
+    @user.last_name = params[:last_name] || @user.last_name
+    @user.birthday = params[:birthday] || @user.birthday
+    @user.address = params[:address] || @user.address
+    @user.phone_number = params[:phone_number] || @user.phone_number
+    @user.currently_doing = params[:currently_doing] || @user.currently_doing
+    @user.education = params[:education] || @user.education
+    @user.references = params[:references] || @user.references
+    @user.additional_info = params[:additional_info] || @user.additional_info
+    @user.image_url = params[:image_url] || @user.image_url
+
+    if @user.save
+      render "show.json.jb"
+    else
+      render json: { errors: @user.errors.full_messages }, status: :bad_request
+    end
+  end
+
   def show
     @user = User.find_by(id: params[:id])
     render "show.json.jb"
@@ -34,5 +55,19 @@ class Api::UsersController < ApplicationController
   def index
     @users = User.where(admin: false)
     render "index.json.jb"
+  end
+
+  def destroy
+    @user = User.find_by(id: params[:id])
+    @user.destroy
+    @matches = Match.where(girl_id: params[:id])
+    @matches.each do |match|
+      match.destroy
+    end
+    @matches = Match.where(boy_id: params[:id])
+    @matches.each do |match|
+      match.destroy
+    end
+    render json: { success: "destroyed and the matches too!" }
   end
 end

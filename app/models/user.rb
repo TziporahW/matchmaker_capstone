@@ -3,7 +3,7 @@ class User < ApplicationRecord
   validates :email, presence: true, uniqueness: true
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :gender, acceptance: { accept: ["M", "F"] }
+  validates :gender, presence: true
   validates :birthday, presence: true
 
   has_many :girl_matches, class_name: "Match", foreign_key: "boy_id"
