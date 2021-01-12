@@ -8,4 +8,6 @@
   boy_last_name: match.boy.last_name,
   girl_approval: match.girl_approval,
   boy_approval: match.boy_approval,
+  girl_email: match.girl.email,
+  boy_email: match.boy.email,
 }
