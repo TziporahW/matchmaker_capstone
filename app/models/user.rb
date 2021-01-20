@@ -5,6 +5,8 @@ class User < ApplicationRecord
   validates :last_name, presence: true
   validates :gender, presence: true
   validates :birthday, presence: true
+  validates :height, presence: true
+  validates :looking_for, presence: true
 
   has_many :girl_matches, class_name: "Match", foreign_key: "boy_id"
   has_many :girls, through: :girl_matches, source: :girl

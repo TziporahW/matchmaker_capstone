@@ -18,6 +18,13 @@ class Api::UsersController < ApplicationController
       references: params[:references],
       additional_info: params[:additional_info],
       image_url: params[:image_url],
+      parents: params[:parents],
+      siblings: params[:siblings],
+      shul: params[:shul],
+      summers: params[:summers],
+      height: params[:height],
+      shadchan_info: params[:shadchan_info],
+      looking_for: params[:looking_for],
     )
     if @user.save
       render json: { message: "User created successfully" }, status: :created
@@ -39,6 +46,13 @@ class Api::UsersController < ApplicationController
     @user.references = params[:references] || @user.references
     @user.additional_info = params[:additional_info] || @user.additional_info
     @user.image_url = params[:image_url] || @user.image_url
+    @user.parents = params[:parents] || @user.parents
+    @user.siblings = params[:siblings] || @user.siblings
+    @user.shul = params[:shul] || @user.shul
+    @user.summers = params[:summers] || @user.summers
+    @user.height = params[:height] || @user.height
+    @user.shadchan_info = params[:shadchan_info] || @user.shadchan_info
+    @user.looking_for = params[:looking_for] || @user.looking_for
 
     if @user.save
       render "show.json.jb"

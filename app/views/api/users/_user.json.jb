@@ -12,4 +12,11 @@
   references: user.references,
   additional_info: user.additional_info,
   image_url: user.image_url,
+  parents: user.parents,
+  siblings: user.siblings,
+  shul: user.shul,
+  summers: user.summers, 
+  height: user.height,
+  shadchan_info: user.shadchan_info,
+  looking_for: user.looking_for
 }
