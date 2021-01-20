@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :api do
+    root :to => "sessions#create"
     post "/users" => "users#create"
     patch "/users/:id" => "users#update"
     get "/users" => "users#index"
