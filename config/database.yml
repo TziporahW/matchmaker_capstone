@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: matchmaker_capstone_production
-  username: matchmaker_capstone
+  # username: matchmaker_capstone
   password: <%= ENV['MATCHMAKER_CAPSTONE_DATABASE_PASSWORD'] %>
