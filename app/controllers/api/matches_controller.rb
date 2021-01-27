@@ -34,7 +34,7 @@ class Api::MatchesController < ApplicationController
       render "index.json.jb"
     elsif current_user.gender == "F"
       @matches = Match.where(girl_id: current_user.id)
-      # @matches = @matches.where(boy_approval: true)
+      @matches = @matches.where(boy_approval: true)
       render "index.json.jb"
     else
       @matches = []

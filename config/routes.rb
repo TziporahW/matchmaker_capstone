@@ -12,6 +12,5 @@ Rails.application.routes.draw do
     get "/matches" => "matches#index"
     get "/matches/:id" => "matches#show"
     patch "/matches/:id" => "matches#update"
-    get "/*path" => proc { [200, {}, [ActionView::Base.new.render(file: "public/index.html")]] }
   end
 end
