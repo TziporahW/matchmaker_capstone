@@ -1,5 +1,5 @@
-# User.destroy_all
-# Match.destroy_all
+User.destroy_all
+Match.destroy_all
 
 User.create!([
   { first_name: "Elisheva", last_name: "Birch", email: "elisheva@example.com", password_digest: "$2a$12$q81.wkeCAkIOKJdHbz69uOGyw/lr63SCx7TJHEX8Oo5CmibCsW6ve", gender: "F", birthday: "2000-06-02", address: "1198 East 16 Street", phone_number: "917-334-6436", currently_doing: "Working in an ambulance office", education: "Brooklyn College ", references: "", additional_info: nil, admin: false, image_url: "https://previews.123rf.com/images/vectorkif/vectorkif1902/vectorkif190200052/116556273-face-expression-of-woman-in-blue-blouse-happy-female-emotion-beautiful-cartoon-character-vector-illu.jpg", parents: nil, siblings: nil, shul: nil, summers: nil, height: "5", shadchan_info: nil, looking_for: "Boy", machatonim: nil },
@@ -25,19 +25,19 @@ User.create!([
   { first_name: "Riki", last_name: "Irch", email: "riki@example.com", password_digest: "$2a$12$yqOhkO9T9t.vyDsHtDiEd.HumgWsPFnbg3DnT9cZZMALkV72PgxaK", gender: "F", birthday: "2001-02-20", address: "home", phone_number: "israeli", currently_doing: "makeup", education: "shana bet", references: "", additional_info: "", admin: false, image_url: "https://i.ytimg.com/vi/b4d28V5tKC0/maxresdefault.jpg", parents: nil, siblings: nil, shul: nil, summers: nil, height: "5", shadchan_info: nil, looking_for: "Boy", machatonim: nil },
 ])
 
-# Match.create!([
-#   { girl_id: 22, boy_id: 30, girl_approval: false, boy_approval: false },
-#   { girl_id: 24, boy_id: 37, girl_approval: false, boy_approval: false },
-#   { girl_id: 25, boy_id: 33, girl_approval: false, boy_approval: false },
-#   { girl_id: 26, boy_id: 39, girl_approval: false, boy_approval: true },
-#   { girl_id: 26, boy_id: 37, girl_approval: false, boy_approval: false },
-#   { girl_id: 27, boy_id: 37, girl_approval: false, boy_approval: false },
-#   { girl_id: 28, boy_id: 41, girl_approval: true, boy_approval: true },
-#   { girl_id: 29, boy_id: 33, girl_approval: false, boy_approval: false },
-#   { girl_id: 29, boy_id: 41, girl_approval: false, boy_approval: false },
-#   { girl_id: 31, boy_id: 37, girl_approval: true, boy_approval: true },
-#   { girl_id: 36, boy_id: 41, girl_approval: true, boy_approval: true },
-#   { girl_id: 38, boy_id: 41, girl_approval: true, boy_approval: true },
-#   { girl_id: 42, boy_id: 40, girl_approval: false, boy_approval: false },
-#   { girl_id: 25, boy_id: 40, girl_approval: true, boy_approval: false },
-# ])
+Match.create!([
+  { girl_id: 22, boy_id: 30, girl_approval: false, boy_approval: false },
+  { girl_id: 24, boy_id: 37, girl_approval: false, boy_approval: false },
+  { girl_id: 25, boy_id: 33, girl_approval: false, boy_approval: false },
+  { girl_id: 26, boy_id: 39, girl_approval: false, boy_approval: true },
+  { girl_id: 26, boy_id: 37, girl_approval: false, boy_approval: false },
+  { girl_id: 27, boy_id: 37, girl_approval: false, boy_approval: false },
+  { girl_id: 28, boy_id: 41, girl_approval: true, boy_approval: true },
+  { girl_id: 29, boy_id: 33, girl_approval: false, boy_approval: false },
+  { girl_id: 29, boy_id: 41, girl_approval: false, boy_approval: false },
+  { girl_id: 31, boy_id: 37, girl_approval: true, boy_approval: true },
+  { girl_id: 36, boy_id: 41, girl_approval: true, boy_approval: true },
+  { girl_id: 38, boy_id: 41, girl_approval: true, boy_approval: true },
+  { girl_id: 42, boy_id: 40, girl_approval: false, boy_approval: false },
+  { girl_id: 25, boy_id: 40, girl_approval: true, boy_approval: false },
+])
